@@ -229,7 +229,11 @@ function renderMatchCard(match) {
 }
 
 function renderEmptyState(message) {
-  matchesRoot.innerHTML = `<div class="empty-state">${message}</div>`;
+  matchesRoot.innerHTML = "";
+  const emptyState = document.createElement("div");
+  emptyState.className = "empty-state";
+  emptyState.textContent = message;
+  matchesRoot.appendChild(emptyState);
 }
 
 async function loadMatches() {
