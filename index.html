@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harry Potter x Octocat Matcher</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">No-key public API mashup</p>
+      <h1>Harry Potter x Octocat Matcher</h1>
+      <p class="hero-copy">
+        Five Harry Potter characters paired with five Octocats through shared traits like bravery,
+        curiosity, protectiveness, and unconventional thinking.
+      </p>
+      <div class="status-row">
+        <span class="status-pill" id="hp-status">Harry Potter API: loading</span>
+        <span class="status-pill" id="octo-status">Octodex API: loading</span>
+      </div>
+    </section>
+
+    <section class="matches-section">
+      <div class="section-heading">
+        <h2>Characteristic-based matches</h2>
+        <p>Live API data is used when available, with graceful fallbacks if a public endpoint is unavailable.</p>
+      </div>
+      <div class="matches-grid" id="matches" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <template id="match-template">
+    <article class="match-card">
+      <div class="match-card__content">
+        <section class="character-card">
+          <div class="character-card__media"></div>
+          <div class="character-card__body">
+            <p class="character-card__label">Harry Potter</p>
+            <h3 class="character-card__title"></h3>
+            <p class="character-card__meta"></p>
+          </div>
+        </section>
+
+        <div class="match-card__connector">
+          <span>matched with</span>
+        </div>
+
+        <section class="character-card">
+          <div class="character-card__media"></div>
+          <div class="character-card__body">
+            <p class="character-card__label">Octocat</p>
+            <h3 class="character-card__title"></h3>
+            <p class="character-card__meta"></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="match-card__footer">
+        <div class="trait-list"></div>
+        <p class="match-card__reason"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>
